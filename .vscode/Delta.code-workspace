@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "..",
+		},
+	],
+	"settings": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "always",
+		},
+
+		"html.autoClosingTags": true,
+		"editor.tabSize": 2,
+	},
+}

@@ -1,0 +1,65 @@
+{
+  "Script": {
+    "prefix": "script",
+    "body": [
+      "<script lang=\"ts\">",
+      "\t$0",
+      "</script>"
+    ],
+    "scope": "svelte",
+  },
+
+  "Document Component": {
+    "prefix": ["/*"],
+    "body": [
+      "<!--",
+      "@component",
+      "$0",
+      "-->"
+    ],
+    "scope": "svelte",
+  },
+
+  "If": {
+    "prefix": ["if"],
+    "body": [
+      "{#if $1}",
+      "\t$0",
+      "{/if}"
+    ],
+    "scope": "svelte",
+  },
+
+  "Iterate": {
+    "prefix": ["each", "for"],
+    "body": [
+      "{#each $1}",
+      "\t$0",
+      "{/each}"
+    ],
+    "scope": "svelte",
+  },
+
+  "Await": {
+    "prefix": ["await"],
+    "body": [
+      "{#await $0}",
+      "\t<p>Loading</p>",
+      "{:then result}",
+      "\t<p>Result: {result}</p>",
+      "{:catch error}",
+      "\t<p>Error: {error}</p>",
+      "{/await}"
+    ],
+    "scope": "svelte",
+  },
+
+  "Else If": {
+    "prefix": ["elif"],
+    "body": [
+      "{:else if $1}",
+      "\t$0",
+    ],
+    "scope": "svelte",
+  }
+}

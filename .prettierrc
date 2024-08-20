@@ -1,0 +1,15 @@
+{
+	"trailingComma": "all",
+	"useTabs": true,
+	"semi": false,
+	"singleQuote": false,
+	"plugins": ["prettier-plugin-svelte", "@prettier/plugin-pug", "prettier-plugin-tailwindcss"],
+	"overrides": [
+		{
+			"files": "*.svelte",
+			"options": {
+				"parser": "svelte"
+			}
+		}
+	]
+}

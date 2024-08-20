@@ -1,0 +1,45 @@
+{
+  "Props (Typed)": {
+    "prefix": ["$props"],
+    "body": [
+      "interface Properties {",
+      "\t$0",
+      "}",
+      "",
+      "const {}: Properties = \\$props()",
+    ],
+    "scope": "typescript",
+  },
+
+  "Props": {
+    "prefix": ["$props"],
+    "body": [
+      "const {$0} = \\$props()",
+    ],
+    "scope": "javascript",
+  },
+
+  "Derived By": {
+    "prefix": ["$derived.by"],
+    "body": [
+      "\\$derived.by(() => {$0})",
+    ],
+    "scope": "typescript,javascript",
+  },
+
+  "Effect": {
+    "prefix": ["$effect", "afterUpdate"],
+    "body": [
+      "\\$effect(() => {$0})",
+    ],
+    "scope": "typescript,javascript",
+  },
+
+  "Prerender Effect": {
+    "prefix": ["$effect.pre", "beforeUpdate"],
+    "body": [
+      "\\$effect.pre(() => {$0})",
+    ],
+    "scope": "typescript,javascript",
+  }
+}
